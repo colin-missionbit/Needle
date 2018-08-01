@@ -19,6 +19,24 @@ jar {
   }
 }
 
+apply plugin: "org.mini2Dx.parcl"
+
+parcl {
+  app {
+    vmArgs = ["-Xmx1g"]
+    appArgs = [""]
+    appName = "Needle"
+    icon = "../android/icon-web.png"
+    applicationCategory = "public.app-category.adventure-games"
+    displayName = 'Needle'
+    identifier = 'com.missionbit.game'
+    copyright = 'Copyright 2018'
+    zipName = 'Needle.zip'
+
+    withJre("/Library/Java/JavaVirtualMachines/jdk1.8.0_171.jdk/Contents/Home/")
+  }
+}
+
 run {
   ignoreExitValue = true
 }
